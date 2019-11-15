@@ -77,13 +77,13 @@
 			}
 			.h-button{
 				button{
-  background: transparent;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: none;
-					border-radius: 20rpx;
+					background: transparent;
+					background-color: transparent;
+					margin: 0;
+					padding: 0;
+					border: 0;
+					outline: none;
+					border-radius: 25rpx;
 				}
 			}
 		}

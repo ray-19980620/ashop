@@ -76,6 +76,6 @@
       padding: 0;
       border: 0;
       outline: none;
-      border-radius: 20rpx;
+      border-radius: 25rpx;
 }
 
