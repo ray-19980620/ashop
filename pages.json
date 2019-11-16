@@ -24,5 +24,32 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+	    "color": "#7A7E83",
+	    "selectedColor": "#ff5a00",
+	    "borderStyle": "black",
+	    "backgroundColor": "#ffffff",
+	    "list": [{
+	        "pagePath": "pages/index/index",
+	        "iconPath": "static/icon/index.png",
+	        "selectedIconPath": "static/icon/index-selected.png",
+	        "text": "组件"
+	    }, {
+	        "pagePath": "pages/index/index",
+	        "iconPath": "static/icon/index.png",
+	        "selectedIconPath": "static/icon/index-selected.png",
+	        "text": "接口"
+	    }, {
+	        "pagePath": "pages/index/index",
+	        "iconPath": "static/icon/index.png",
+	        "selectedIconPath": "static/icon/index-selected.png",
+	        "text": "接口"
+	    }, {
+	        "pagePath": "pages/index/index",
+	        "iconPath": "static/icon/index.png",
+	        "selectedIconPath": "static/icon/index-selected.png",
+	        "text": "接口"
+	    }]
 	}
 }

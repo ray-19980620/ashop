@@ -1,8 +1,21 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+		<view class="bg">
+			<view class="top">
+				<view class="search">
+					<input type="text" value="" />
+					<button type="button"> </button>
+				</view>
+			</view>
+			<view class="swiper">
+				
+			</view>
+			<view class="recommend">
+				
+			</view>
+			<view class="good-goods">
+				
+			</view>
 		</view>
 	</view>
 </template>
@@ -18,35 +31,44 @@
 
 		},
 		methods: {
-
+			
 		}
 	}
 </script>
 
-<style>
-	.content {
+<style lang="scss">
+	.bg{
+		width: 100%;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+		.top{
+			width: 100%;
+			background-color: #007AFF;
+			.search{
+				padding: 20rpx 20rpx 20rpx 20rpx;
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				input{
+					width: 80%;
+					border-radius: 10rpx;
+				}
+				button{
+					width: 10%;
+				}
+			}
+		}
+		.swiper{
+			width: 100%;
+			background-color: #4CD964;
+		}
+		.recommend{
+			width: 100%;
+			background-color: orange;
+		}
+		.good-goods{
+			width: 100%;
+			background-color: pink;
+		}
 	}
 </style>
