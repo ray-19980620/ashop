@@ -120,28 +120,46 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-var _default =
-{
-  data: function data() {
-    return {
-      activeKey: 0,
-      category: [
-      {
-        'id': 0, 'name': '男装' },
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-      {
-        'id': 1, 'name': '女装' },
 
-      {
-        'id': 2, 'name': '男鞋' }],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _toast = _interopRequireDefault(__webpack_require__(/*! ../../wxcomponents/vant/dist/toast/toast */ 45));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { minHour: 10, maxHour: 20, minDate: new Date(), maxDate: new Date(2019, 10, 1), currentDate: new Date(), activeKey: 0, category: [{ 'id': 0, 'name': '男装' }, { 'id': 1, 'name': '女装' }, { 'id': 2, 'name': '男鞋' }],
 
 
       category_son: {
@@ -161,8 +179,20 @@ var _default =
 
   },
   methods: {
-    change: function change(e) {
-      console.log(e);
+    change: function change(data) {
+      var index = data.mp.detail;
+      console.log(index);
+
+    },
+    showToast: function showToast()
+    {
+      (0, _toast.default)(123);
+      _toast.default.loading({
+        context: this,
+        message: '加载中...',
+        forbidClick: true,
+        loadingType: 'spinner' });
+
     } } };exports.default = _default;
 
 /***/ })

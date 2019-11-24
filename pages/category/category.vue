@@ -1,15 +1,33 @@
 <template>
 	<view>
-		<van-sidebar v-model="activeKey">
+		<van-toast id="van-toast" />
+		
+		<van-sidebar v-model="activeKey" @change="change">
 		  <van-sidebar-item v-for="(item, key) in category" :category-id="item.id" :key="key" :title="item.name" />
 		</van-sidebar>
+		
+		<van-datetime-picker
+		  v-model="currentDate"
+		  type="datetime"
+		  :min-date="minDate"
+		  :max-date="maxDate"
+		/>
+		
+		<button type="primary" @tap="showToast">aaa</button>
 	</view>
 </template>
 
 <script>
+	import Toast from '../../wxcomponents/vant/dist/toast/toast';
 	export default {
 		data() {
 			return {
+				minHour: 10,
+				maxHour: 20,
+				minDate: new Date(),
+				maxDate: new Date(2019, 10, 1),
+				currentDate: new Date(),
+				
 				activeKey: 0,
 				category: [
 					{
@@ -39,8 +57,20 @@
 			};
 		},
 		methods: {
-			change: function(e) {
-				console.log(e);
+			change: function(data) { 
+				let index = data.mp.detail;
+				console.log(index);  
+				
+			},
+			showToast: function()
+			{
+				Toast(123);
+				Toast.loading({
+				  context:this,
+				  message: '加载中...',
+				  forbidClick: true,
+				  loadingType: 'spinner'
+				});
 			}
 		}
 	}
