@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "购物车",
-  "usingComponents": {}
+  "usingComponents": {
+    "van-icon": "/wxcomponents/vant/dist/icon/index",
+    "van-submit-bar": "/wxcomponents/vant/dist/submit-bar/index"
+  }
 }

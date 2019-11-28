@@ -1,8 +1,6 @@
 {
   "navigationBarTitleText": "分类",
   "usingComponents": {
-    "datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index",
-    "toast": "/wxcomponents/vant/dist/toast/index",
     "van-sidebar": "/wxcomponents/vant/dist/sidebar/index",
     "van-sidebar-item": "/wxcomponents/vant/dist/sidebar-item/index"
   }
