@@ -132,7 +132,7 @@
 			width: 100%;
 			height: 650rpx;
 			z-index: -1;
-			background-color: #ff5a00;
+			background-color: #e93a3e;
 			border-radius: 50rpx;
 		}
 		.top{

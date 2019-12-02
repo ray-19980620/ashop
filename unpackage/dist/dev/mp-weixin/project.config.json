@@ -39,6 +39,13 @@
 					"id": -1,
 					"name": "pages/cart/cart",
 					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cart/test",
+					"pathName": "pages/cart/test",
 					"scene": null
 				}
 			]

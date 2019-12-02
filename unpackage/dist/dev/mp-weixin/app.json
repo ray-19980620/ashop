@@ -5,7 +5,8 @@
     "pages/login/register",
     "pages/category/category",
     "pages/cart/cart",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/cart/test"
   ],
   "subPackages": [],
   "window": {
@@ -16,7 +17,7 @@
   },
   "tabBar": {
     "color": "#7A7E83",
-    "selectedColor": "#ff5a00",
+    "selectedColor": "#e93a3e",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [

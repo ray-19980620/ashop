@@ -142,13 +142,70 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
-    return {};
+    return {
+      checked_goods: false,
+      checked_all: false,
+      list: [
+      { 'id': 1, 'title': '华硕（ASUS）ROG-STRIX-GeForce RTX2080 TI-O11G-GAMING 1350-1665MHz 14000MHz 游戏电竞专业显卡 11G', 'price': 11999.00, 'number': 1, 'image': '/static/goods/2080ti.jpg' },
+      { 'id': 2, 'title': '联想(Lenovo) LEGION Y9000X 15.6英寸高性能标压轻薄笔记本电脑(i7-9750H 32G 2TSSD 4K UHD)深空灰', 'price': 11999.00, 'number': 1, 'image': '/static/goods/y9000x.jpg' }] };
 
 
-  } };exports.default = _default;
+  },
+  methods: {
+    onShow: function onShow() {
+      console.log(this.checked);
+    },
+
+    onSubmit: function onSubmit() {
+
+    },
+    onChange: function onChange(event) {var
+
+      key =
+      event.currentTarget.dataset.key;
+      this[key] = event.detail;
+      console.log();
+    },
+    onClick: function onClick(event) {
+      // const {
+      // 	value
+      // } = event.currentTarget.dataset;
+      // this.radio3 = value
+    },
+
+    toggle: function toggle(event) {
+      // const {
+      // 	name
+      // } = event.currentTarget.dataset;
+      // const checkbox = this.selectComponent(`.checkboxes-${name}`);
+      // checkbox.toggle();
+    } } };exports.default = _default;
 
 /***/ }),
 
