@@ -5,7 +5,8 @@
 				<view class="goods-box">
 					<view class="goods-check-box">
 						<view class="check-item">
-							<van-checkbox :value="checked_goods" data-key="checked_goods" :data-index="item.id" checked-color="#e93a3e" @change="onChange"></van-checkbox>
+							<!-- <van-checkbox :value="checked_goods" data-key="checked_goods" :data-index="item.id" checked-color="#e93a3e" @change="onChange"></van-checkbox> -->
+							<van-checkbox v-model="item.is_checked" :data-index="item.id" checked-color="#e93a3e" @change="onChange"></van-checkbox>
 						</view>
 					</view>
 					<view class="goods-left">
@@ -31,11 +32,11 @@
 		</view>
 		<view class="bottom">
 			<van-submit-bar
-			  :price="3050"
+			  :price="price"
 			  button-text="提交订单"
 			  @submit="onSubmit"
 			>
-			  <van-checkbox v-model="checked_all" data-key="checked_all" @change="onChange" :style="{marginLeft:'5vw',fontSize:'15px'}" checked-color="#e93a3e">全选</van-checkbox>
+			  <van-checkbox v-model="checked_all" data-key="checked_all" @change="onChangeAll" :style="{marginLeft:'5vw',fontSize:'15px'}" checked-color="#e93a3e">全选</van-checkbox>
 			</van-submit-bar>
 		</view>
 	</view>
@@ -45,43 +46,36 @@
 	export default {
 		data() {
 			return {
+				price: 0,
 				checked_goods: false,
 				checked_all: false,
 				list: [
-					{'id': 1, 'title': '华硕（ASUS）ROG-STRIX-GeForce RTX2080 TI-O11G-GAMING 1350-1665MHz 14000MHz 游戏电竞专业显卡 11G', 'price': 11999.00, 'number': 1, 'image': '/static/goods/2080ti.jpg'},
-					{'id': 2, 'title': '联想(Lenovo) LEGION Y9000X 15.6英寸高性能标压轻薄笔记本电脑(i7-9750H 32G 2TSSD 4K UHD)深空灰', 'price': 11999.00, 'number': 1, 'image': '/static/goods/y9000x.jpg'},
+					{'id': 1, 'is_checked': false, 'title': '华硕（ASUS）ROG-STRIX-GeForce RTX2080 TI-O11G-GAMING 1350-1665MHz 14000MHz 游戏电竞专业显卡 11G', 'price': 11999.00, 'number': 1, 'image': '/static/goods/2080ti.jpg'},
+					{'id': 2, 'is_checked': false, 'title': '联想(Lenovo) LEGION Y9000X 15.6英寸高性能标压轻薄笔记本电脑(i7-9750H 32G 2TSSD 4K UHD)深空灰', 'price': 11999.00, 'number': 1, 'image': '/static/goods/y9000x.jpg'},
 				]
 			};
 		},
 		methods: {
-			onShow: function() {
-				console.log(this.checked)
+			onLoad: function() {
+				let _this = this;
+				this.list.forEach((item) => {
+					_this.price += item.price * 100
+				})
 			},
 			
 			onSubmit: function() {
 				
 			},
 			onChange(event) {
-				const {
-					key
-				} = event.currentTarget.dataset;
-				this[key] = event.detail;
+				this.list[event.currentTarget.dataset.index - 1]['is_checked'] = event.detail;
 				console.log()
 			},
-			onClick(event) {
-				// const {
-				// 	value
-				// } = event.currentTarget.dataset;
-				// this.radio3 = value
+			onChangeAll(event) {
+				this.checked_all = event.detail;
+				this.list.forEach((item) => {
+					item.is_checked = event.detail;
+				})
 			},
-
-			toggle(event) {
-				// const {
-				// 	name
-				// } = event.currentTarget.dataset;
-				// const checkbox = this.selectComponent(`.checkboxes-${name}`);
-				// checkbox.toggle();
-			}
 		}
 	}
 </script>
@@ -160,8 +154,9 @@
 							//background-color: #007AFF;
 							width: 100%;
 							height: 10%;
+							font-size: .8rem;
 							.right-price{
-								color: #d06665;
+								color: #ee0a24;
 								line-height: 100%;
 								width: 40%;
 							}

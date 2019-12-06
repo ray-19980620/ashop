@@ -1,1 +1,1 @@
-<view></view>
+<view class="content"><view class="bg"><view class="background"></view><view class="top-bar"><view class="top-bar-icon"><van-icon vue-id="1" name="setting-o" bind:__l="__l"></van-icon></view></view><view class="avatar-bar"></view><view class="order-bar"></view></view></view>
