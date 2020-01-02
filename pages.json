@@ -24,10 +24,8 @@
 				"navigationBarTitleText": "分类",
 				"usingComponents" : {  
 				 //    "datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index",
-					// "toast": "/wxcomponents/vant/dist/toast/index",
 				    "van-sidebar": "/wxcomponents/vant/dist/sidebar/index",
 				    "van-sidebar-item": "/wxcomponents/vant/dist/sidebar-item/index"
-				   
 				}
 			}
         }
@@ -48,7 +46,11 @@
             "style" : {
 				"navigationBarTitleText": "我的",
 				"usingComponents": {
-					"icon": "/wxcomponents/vant/dist/icon/index"
+					"van-icon": "/wxcomponents/vant/dist/icon/index",
+					"van-grid": "/wxcomponents/vant/dist/grid/index",
+					"van-grid-item": "/wxcomponents/vant/dist/grid-item/index",
+					"van-toast": "/wxcomponents/vant/dist/toast/index",
+					"van-tag": "/wxcomponents/vant/dist/tag/index"
 				}
 			}
         }
