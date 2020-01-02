@@ -30,15 +30,15 @@
 					<view class="order-hr"></view>
 					<view class="order-bottom">
 						<view class="order-bottom-block">
-							<image class="order-bottom-block-image" src="" mode=""></image>
+							<image class="order-bottom-block-image" src="/static/icon/status-0.png" mode=""></image>
 							<view class="order-bottom-block-name">待付款</view>
 						</view>
 						<view class="order-bottom-block">
-							<image class="order-bottom-block-image" src="" mode=""></image>
+							<image class="order-bottom-block-image" src="/static/icon/status-1.png" mode=""></image>
 							<view class="order-bottom-block-name">待发货</view>							
 						</view>
 						<view class="order-bottom-block">
-							<image class="order-bottom-block-image" src="" mode=""></image>
+							<image class="order-bottom-block-image" src="/static/icon/status-2.png" mode=""></image>
 							<view class="order-bottom-block-name">待收货</view>							
 						</view>
 					</view>
@@ -208,7 +208,7 @@
 				background-color: #fff;
 				.order-top{
 					width: 100%;
-					height: 25%;
+					height: 33%;
 					display: flex;
 					flex-direction: row;
 					justify-content: space-between;
@@ -216,13 +216,13 @@
 					.my-order{
 						width: 20%;
 						height: 100%;
-						line-height: 180%;
+						line-height: 250%;
 						text-align: center;
 					}
 					.my-all-order{
 						width: 25%;
 						height: 100%;
-						line-height: 180%;
+						line-height: 250%;
 						color: #808080;
 					}
 				}
@@ -233,7 +233,7 @@
 				}
 				.order-bottom{
 					width: 100%;
-					height: 75%;
+					height: 66%;
 					display: flex;
 					flex-direction: row;
 					justify-content: space-around;
@@ -241,6 +241,20 @@
 					.order-bottom-block{
 						height: 80%;
 						width: 25%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						.order-bottom-block-image{
+							width: 30%;
+							height: 50%;
+						}
+						.order-bottom-block-name{
+							text-align: center;
+							width: 60%;
+							height: 20%;
+							font-size: 25rpx;
+						}
 					}
 				}
 			}
