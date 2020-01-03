@@ -23,7 +23,6 @@
             "style" : {
 				"navigationBarTitleText": "分类",
 				"usingComponents" : {  
-				 //    "datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index",
 				    "van-sidebar": "/wxcomponents/vant/dist/sidebar/index",
 				    "van-sidebar-item": "/wxcomponents/vant/dist/sidebar-item/index"
 				}
@@ -37,7 +36,6 @@
 					"van-icon": "/wxcomponents/vant/dist/icon/index",
 					"van-submit-bar": "/wxcomponents/vant/dist/submit-bar/index",
 					"van-checkbox": "/wxcomponents/vant/dist/checkbox/index"
-					//"van-checkbox-group": "/wxcomponents/vant/dist/checkbox-group/index"
 				}
 			}
         }
