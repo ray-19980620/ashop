@@ -61,6 +61,17 @@
 				}
 			}
         }
+        ,{
+            "path" : "pages/other/goods",
+            "style" : {
+				"navigationBarTitleText": "详情",
+				"usingComponents": {
+					"van-goods-action-icon": "/wxcomponents/vant/dist/goods-action-icon/index",
+					"van-goods-action-button": "/wxcomponents/vant/dist/goods-action-button/index",
+					"van-goods-action": "/wxcomponents/vant/dist/goods-action/index"
+				}
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

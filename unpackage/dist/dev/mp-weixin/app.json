@@ -6,7 +6,8 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/my/my",
-    "pages/cart/test"
+    "pages/cart/test",
+    "pages/other/goods"
   ],
   "subPackages": [],
   "window": {
@@ -47,5 +48,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap74.json"
 }

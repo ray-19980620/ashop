@@ -41,7 +41,7 @@
 							今日推荐
 						</view>
 						<view class="recommend-list">
-							<view class="recommend-goods-wrap" v-for="(item, key) in recommend" :key="key">
+							<view class="recommend-goods-wrap" v-for="(item, key) in recommend" :key="key" @tap="goGoods">
 								<image :src="item.image" mode=""></image>
 								<view class="">¥ {{ item.price }}</view>
 							</view>
@@ -52,7 +52,7 @@
 							好物推荐
 						</view>
 						<view class="good-goods-list">
-							<view class="good-goods-wrap" v-for="(item, key) in good_goods" :key="key">
+							<view class="good-goods-wrap" v-for="(item, key) in good_goods" :key="key" @tap="goGoods">
 								<image :src="item.image" mode=""></image>
 								<view class="">¥ {{ item.price }}</view>
 							</view>
@@ -62,7 +62,7 @@
 			</view>
 			<view class="more">
 				<view class="more-contanier">
-					<view class="more-wrap" v-for="(item, key) in more" :key="key">
+					<view class="more-wrap" v-for="(item, key) in more" :key="key" @tap="goGoods">
 						<image :src="item.image" mode=""></image>
 						<view class="more-heading">{{ item.name }}</view>
 						<view class="more-price">¥{{ item.price }}</view>
@@ -110,7 +110,11 @@
 
 		},
 		methods: {
-			
+			goGoods: function() {
+				uni.navigateTo({
+				    url: '/pages/other/goods'
+				});
+			}
 		}
 	}
 </script>
@@ -191,7 +195,7 @@
 			justify-content: center;
 			margin-top: 20rpx;
 			.head-swiper{
-				width: 95%;
+				width: 93%;
 				// background-color: #4CD964;
 				border-radius: 25rpx;
 				.swiper-wrap{
