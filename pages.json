@@ -72,6 +72,10 @@
 				}
 			}
         }
+        ,{
+            "path" : "pages/components/sku",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

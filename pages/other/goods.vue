@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="container">
 		<view class="hh_swiper">
 			<view class="head-swiper">
 				<view class="swiper-wrap">
@@ -17,12 +17,13 @@
 				</view>
 			</view>
 		</view>
+		<sku class="sku" ref="sku"></sku>
 		<view class="bottom-fixed">
 			<van-goods-action>
 			  <van-goods-action-icon icon="chat-o" text="客服" />
 			  <van-goods-action-icon icon="cart-o" text="购物车" info="5" />
 			  <van-goods-action-icon icon="shop-o" text="店铺" info="12" />
-			  <van-goods-action-button type="warning" text="加入购物车" />
+			  <van-goods-action-button type="warning" text="加入购物车" @tap="addCart"/>
 			  <van-goods-action-button type="danger" text="立即购买" />
 			</van-goods-action>
 		</view>
@@ -30,6 +31,7 @@
 </template>
 
 <script>
+	import sku from "../components/sku.vue";
 	export default {
 		data() {
 			return {
@@ -39,6 +41,15 @@
 				interval: 4000,
 				duration: 500
 			};
+		},
+		components: {
+			sku
+		},
+		methods: {
+			addCart: function() {
+				console.log(this.$refs);
+				this.$refs.sku.show();
+			}
 		}
 	}
 </script>
@@ -46,8 +57,14 @@
 <style lang="scss">
 page {
 	background-color: #f7f7f7;
+	height: 100%;
+}
+.container{
+	height: 100%;
+	position: relative;
 }
 .hh_swiper{
+	position: absolute;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
