@@ -47,7 +47,6 @@
 		},
 		methods: {
 			addCart: function() {
-				console.log(this.$refs);
 				this.$refs.sku.show();
 			}
 		}

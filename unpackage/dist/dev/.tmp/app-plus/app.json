@@ -7,7 +7,8 @@
     "pages/cart/cart",
     "pages/my/my",
     "pages/cart/test",
-    "pages/other/goods"
+    "pages/other/goods",
+    "pages/components/sku"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -54,6 +55,6 @@
     "autoclose": false
   },
   "appname": "ashop",
-  "compilerVersion": "2.4.6",
+  "compilerVersion": "2.5.1",
   "usingComponents": {}
 }

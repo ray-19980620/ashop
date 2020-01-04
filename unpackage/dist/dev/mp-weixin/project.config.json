@@ -11,8 +11,6 @@
 	"libVersion": "2.9.2",
 	"appid": "touristappid",
 	"projectname": "ashop",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

@@ -1,7 +1,7 @@
 <template name="sku">
 	<view class="sku-wrap">
-		<view class="shadow" :style="{display: isDisplay}"></view>
-		<view class="content" :class="{ animated: isSnimated, slideInUp: isSlideInUp }" :style="{display: isDisplay}">
+		<view class="shadow" :class="{ animated: true, fadeIn: turnOn, fadeOut: turnOff}" :style="{display: isDisplay}" @tap="closeSkuAndShadow"></view>
+		<view class="content" :class="{ animated: true, slideInUp: turnOn, slideOutDown: turnOff }" :style="{display: isDisplay}">
 			fuck
 		</view>
 	</view>
@@ -13,18 +13,39 @@
 		data() {
 			return {
 				isDisplay: 'none',
-				isSnimated: false,
-				isSlideInUp: false
+				turnOn: false,
+				turnOff: false,
+				showBlock: 0
 			};
 		},
-		methods: { 
+		methods: {
 			show: function() {
-				this.isDisplay = 'block';
-				this.isSnimated = true;
-				this.isSlideInUp = true;
+				var _this = this;
+				if (_this.showBlock == 1) {
+					return false;
+				}
+				_this.isDisplay = 'block';
+				_this.turnOn = true;
+				_this.showBlock = 1;
+				setTimeout(function() {
+					_this.showBlock = 0;
+				}, 1000)
 			},
-			test: function() {
-				console.log('test')
+			close: function(e) {
+				console.log('close');
+				var _this = this;
+				_this.turnOn = false;
+				_this.turnOff = true;
+				setTimeout(function() {
+					_this.isDisplay = 'none';
+					_this.showBlock = 0;
+					_this.turnOff = false;
+				}, 1000) 
+			},
+			closeSkuAndShadow: function() {
+				if (this.showBlock == 0) {
+					this.close();
+				}
 			}
 		}
 	}
@@ -34,23 +55,25 @@
 .sku{
 	height: 100%;
 	width: 100%;
-	//z-index: 2;
 	position: absolute;
+	left: -100%;
 	.sku-wrap{
 		height: 100%;
 		width: 100%;
-		position: relative;
+		position: absolute;
 		.shadow{
 			height: 100%;
 			width: 100%;
 			z-index: 4;
 			position: absolute;
-			background: rgba(0, 0, 0, 0.5)
+			left: 100%;
+			background: rgba(0, 0, 0, 0.4)
 		}
 		.content{
 			width: 100%;
 			height: 65%;
-			position: fixed;
+			position: absolute;
+			left: 100%;
 			z-index: 5;
 			bottom: 0;
 			background-color: #007AFF;	
